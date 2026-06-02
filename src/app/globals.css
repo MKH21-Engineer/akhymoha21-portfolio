@@ -1,36 +1,98 @@
 @import "tailwindcss";
 
-/* ── Design tokens ───────────────────────────────────────────── */
+/* ── Design tokens ───────────────────────────────────────── */
 :root {
-  --background: #f8f8f7;
-  --foreground: #171717;
+  --accent: #e8ff4a;
+  --accent-hover: #b8cc30;
 }
 
-/* next-themes writes the .dark class on <html> — this is what
-   controls light/dark switching. Remove @media prefers-color-scheme
-   so next-themes is the single source of truth. */
-.dark {
-  --background: #0a0a0a;
-  --foreground: #ededed;
+/* ── Light mode overrides ────────────────────────────────── */
+.light {
+  --tw-prose-body: #111;
 }
 
-/* ── Tailwind theme bridge ───────────────────────────────────── */
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-inter);
+/* Force readable neutrals in light mode */
+.light body {
+  background-color: #f5f5f0;
+  color: #111111;
 }
 
-/* ── Base styles ─────────────────────────────────────────────── */
-html {
-  background-color: var(--background);
-  color: var(--foreground);
-  transition: background-color 0.3s ease, color 0.3s ease;
+/* Nav */
+.light nav {
+  background-color: rgba(245, 245, 240, 0.85) !important;
+  border-color: #d4d4cc !important;
+}
+.light nav a,
+.light nav button {
+  color: #333 !important;
+  border-color: #bbb !important;
+}
+.light nav a:hover {
+  color: #000 !important;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
+/* Cards / surfaces */
+.light .bg-neutral-900  { background-color: #ebebeb !important; }
+.light .bg-neutral-950  { background-color: #f0f0ea !important; }
+.light .bg-neutral-800  { background-color: #e0e0d8 !important; }
+.light .border-neutral-800 { border-color: #c8c8c0 !important; }
+.light .border-neutral-700 { border-color: #b8b8b0 !important; }
+
+/* Text */
+.light .text-neutral-400 { color: #444 !important; }
+.light .text-neutral-500 { color: #666 !important; }
+.light .text-neutral-600 { color: #555 !important; }
+.light .text-neutral-200 { color: #111 !important; }
+.light .text-neutral-300 { color: #222 !important; }
+.light .text-neutral-100 { color: #111 !important; }
+
+/* Hero "Book a Call" outline button — invisible in light mode fix */
+.light .btn-outline-hero {
+  border-color: #555 !important;
+  color: #111 !important;
 }
+.light .btn-outline-hero:hover {
+  border-color: #000 !important;
+}
+
+/* Accent stays yellow — readable on both */
+.text-\[#e8ff4a\] { color: #e8ff4a; }
+.light .text-\[#e8ff4a\] { color: #5a6e00 !important; }
+.light .border-\[#e8ff4a\] { border-color: #5a6e00 !important; }
+
+/* Case study cards */
+.light .hover\:bg-neutral-900:hover { background-color: #e0e0d8 !important; }
+
+/* Skill blocks */
+.light .bg-neutral-900.border { background-color: #e8e8e2 !important; }
+
+/* Testimonial cards */
+.light .bg-neutral-950 { background-color: #f0f0ea !important; }
+
+/* Contact inputs */
+.light .bg-neutral-900.border.border-neutral-700 {
+  background-color: #ffffff !important;
+  border-color: #bbb !important;
+  color: #111 !important;
+}
+.light input::placeholder,
+.light textarea::placeholder {
+  color: #999 !important;
+}
+.light select {
+  background-color: #ffffff !important;
+  color: #111 !important;
+}
+
+/* Footer */
+.light footer {
+  border-color: #d0d0c8 !important;
+  background-color: #f0f0ea !important;
+}
+.light .footer-link { color: #555 !important; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #444; border-radius: 2px; }
+.light ::-webkit-scrollbar-thumb { background: #bbb; }

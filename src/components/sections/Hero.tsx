@@ -42,8 +42,8 @@ export default function Hero() {
             View Work
           </button>
           <button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            className="border border-neutral-700 text-neutral-100 px-7 py-3.5 rounded-lg text-sm
-              hover:border-neutral-400 transition-colors">
+            className="          border border-neutral-700 text-neutral-100 px-7 py-3.5 rounded-lg text-sm
+              hover:border-neutral-400 transition-colors btn-outline-hero">
             Book a Call
           </button>
         </motion.div>
