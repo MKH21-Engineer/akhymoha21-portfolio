@@ -6,93 +6,78 @@
   --accent-hover: #b8cc30;
 }
 
-/* ── Light mode overrides ────────────────────────────────── */
-.light {
-  --tw-prose-body: #111;
-}
-
-/* Force readable neutrals in light mode */
+/* ── Light mode — warm off-white premium palette ─────────── */
 .light body {
-  background-color: #f5f5f0;
-  color: #111111;
+  background-color: #f2f0eb;   /* warm parchment base */
+  color: #1a1a18;
 }
 
 /* Nav */
 .light nav {
-  background-color: rgba(245, 245, 240, 0.85) !important;
-  border-color: #d4d4cc !important;
+  background-color: rgba(242, 240, 235, 0.88) !important;
+  border-color: #d8d4cc !important;
 }
-.light nav a,
-.light nav button {
-  color: #333 !important;
-  border-color: #bbb !important;
-}
-.light nav a:hover {
-  color: #000 !important;
-}
+.light nav a        { color: #3a3a36 !important; }
+.light nav a:hover  { color: #1a1a18 !important; }
+.light nav button   { color: #3a3a36 !important; border-color: #b8b4ac !important; }
+.light nav button:hover { color: #1a1a18 !important; border-color: #888 !important; }
 
-/* Cards / surfaces */
-.light .bg-neutral-900  { background-color: #ebebeb !important; }
-.light .bg-neutral-950  { background-color: #f0f0ea !important; }
-.light .bg-neutral-800  { background-color: #e0e0d8 !important; }
-.light .border-neutral-800 { border-color: #c8c8c0 !important; }
-.light .border-neutral-700 { border-color: #b8b8b0 !important; }
+/* Surfaces */
+.light .bg-neutral-900  { background-color: #eae8e2 !important; }
+.light .bg-neutral-950  { background-color: #e8e5de !important; }
+.light .bg-neutral-800  { background-color: #dedad2 !important; }
 
-/* Text */
-.light .text-neutral-400 { color: #444 !important; }
-.light .text-neutral-500 { color: #666 !important; }
-.light .text-neutral-600 { color: #555 !important; }
-.light .text-neutral-200 { color: #111 !important; }
-.light .text-neutral-300 { color: #222 !important; }
-.light .text-neutral-100 { color: #111 !important; }
+/* Borders */
+.light .border-neutral-800 { border-color: #ccc8be !important; }
+.light .border-neutral-700 { border-color: #bbb6ac !important; }
+.light .divide-neutral-800 { border-color: #ccc8be !important; }
 
-/* Hero "Book a Call" outline button — invisible in light mode fix */
+/* Text hierarchy */
+.light .text-neutral-100 { color: #1a1a18 !important; }
+.light .text-neutral-200 { color: #2a2a26 !important; }
+.light .text-neutral-300 { color: #3a3a36 !important; }
+.light .text-neutral-400 { color: #555550 !important; }
+.light .text-neutral-500 { color: #777770 !important; }
+.light .text-neutral-600 { color: #666660 !important; }
+
+/* Accent yellow → deep olive so it's readable on warm bg */
+.light .text-\[#e8ff4a\]    { color: #6b7c00 !important; }
+.light .border-\[#e8ff4a\]  { border-color: #6b7c00 !important; }
+.light .bg-\[#e8ff4a\]      { background-color: #d4e800 !important; }
+.light .hover\:bg-\[#b8cc30\]:hover { background-color: #a8bc20 !important; }
+
+/* Hero outline button */
 .light .btn-outline-hero {
-  border-color: #555 !important;
-  color: #111 !important;
+  border-color: #888880 !important;
+  color: #1a1a18 !important;
 }
-.light .btn-outline-hero:hover {
-  border-color: #000 !important;
-}
+.light .btn-outline-hero:hover { border-color: #444 !important; }
 
-/* Accent stays yellow — readable on both */
-.text-\[#e8ff4a\] { color: #e8ff4a; }
-.light .text-\[#e8ff4a\] { color: #5a6e00 !important; }
-.light .border-\[#e8ff4a\] { border-color: #5a6e00 !important; }
-
-/* Case study cards */
-.light .hover\:bg-neutral-900:hover { background-color: #e0e0d8 !important; }
-
-/* Skill blocks */
-.light .bg-neutral-900.border { background-color: #e8e8e2 !important; }
-
-/* Testimonial cards */
-.light .bg-neutral-950 { background-color: #f0f0ea !important; }
-
-/* Contact inputs */
-.light .bg-neutral-900.border.border-neutral-700 {
-  background-color: #ffffff !important;
-  border-color: #bbb !important;
-  color: #111 !important;
+/* Inputs & selects */
+.light input,
+.light textarea,
+.light select {
+  background-color: #ede9e1 !important;
+  border-color: #c4bfb4 !important;
+  color: #1a1a18 !important;
 }
 .light input::placeholder,
-.light textarea::placeholder {
-  color: #999 !important;
-}
-.light select {
-  background-color: #ffffff !important;
-  color: #111 !important;
-}
+.light textarea::placeholder { color: #aaa89e !important; }
+
+/* Case study hover */
+.light .hover\:bg-neutral-900:hover { background-color: #dedad2 !important; }
 
 /* Footer */
 .light footer {
-  border-color: #d0d0c8 !important;
-  background-color: #f0f0ea !important;
+  background-color: #ede9e1 !important;
+  border-color: #ccc8be !important;
 }
-.light .footer-link { color: #555 !important; }
+.light footer a,
+.light footer span { color: #777770 !important; }
+.light footer a:hover { color: #1a1a18 !important; }
 
 /* Scrollbar */
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: #444; border-radius: 2px; }
-.light ::-webkit-scrollbar-thumb { background: #bbb; }
+.light ::-webkit-scrollbar-thumb { background: #c4bfb4; }

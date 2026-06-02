@@ -33,7 +33,7 @@ export default function Contact() {
           <RevealWrapper delay={0.1}>
             {[
               { label:'Instagram', val:'@akhymoha21', href:'https://instagram.com/akhymoha21' },
-              { label:'Email',     val:'akhymoha21@gmail.com', href:'mailto:akhymoha21@gmail.com' },
+              { label:'Email',     val:'m2006241@gmail.com', href:'mailto:m2006241@gmail.com' },
               { label:'Book a Call', val:'via Calendly', href:'#' },
             ].map(({ label, val, href }) => (
               <a key={label} href={href} target={href.startsWith('http') ? '_blank' : undefined}
