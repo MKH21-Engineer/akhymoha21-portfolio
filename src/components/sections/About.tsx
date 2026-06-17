@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import RevealWrapper from '@/components/ui/RevealWrapper'
 
 export default function About() {
@@ -6,13 +7,15 @@ export default function About() {
       <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-start">
         <div className="md:sticky md:top-32">
           <RevealWrapper>
-            <div className="aspect-[3/4] bg-neutral-900 border border-neutral-800 rounded-xl
-              flex flex-col items-center justify-center gap-3">
-              <div className="w-16 h-16 rounded-full bg-neutral-800 border border-neutral-700
-                flex items-center justify-center text-2xl font-light text-neutral-300 tracking-tight">
-                AK
-              </div>
-              <p className="text-xs text-neutral-500 tracking-widest">akhymoha21</p>
+            <div className="relative aspect-square bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden">
+              <Image
+                src="/profile.png"
+                alt="akhymoha21 — Motion Designer & Front-End Developer"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover"
+                priority
+              />
             </div>
           </RevealWrapper>
         </div>
@@ -45,7 +48,10 @@ export default function About() {
                   <p className="text-[10px] tracking-widest uppercase text-[#e8ff4a] mb-4 font-medium">{title}</p>
                   <ul className="space-y-1.5">
                     {items.map(i => (
-                      <li key={i} className="text-xs text-neutral-400 pl-3 relative before:absolute before:left-0 before:content-['—'] before:text-neutral-600">{i}</li>
+                      <li key={i} 
+                      className="text-xs
+                       text-neutral-400 
+                       pl-3 relative before:absolute before:left-0 before:content-['—'] before:text-neutral-600">{i}</li>
                     ))}
                   </ul>
                 </div>
