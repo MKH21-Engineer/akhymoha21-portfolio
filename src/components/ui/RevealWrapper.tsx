@@ -20,7 +20,7 @@ export default function RevealWrapper({ children, delay = 0, className }: Props)
       initial="hidden"
       animate={inView ? 'visible' : 'hidden'}
       transition={{ delay }}
-      className={className}
+      className={`h-full w-full ${className}`}
     >
       {children}
     </motion.div>
