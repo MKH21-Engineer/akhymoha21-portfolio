@@ -65,7 +65,7 @@ export const allProjects: Project[] = [
     tags: ['Testimonial', 'Brand Story', 'Conversion'],
     featured: false,
     date: '2023-12-05',
-    views: 147,
+    views: 860,
     challenge: 'Build trust and move viewers from cold awareness to warm intent.',
     process: 'Intentional pacing, warmer color grade, human-first framing.',
     result: 'Used in client sales funnels to improve conversion.',
